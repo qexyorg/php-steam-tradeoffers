@@ -201,7 +201,7 @@ class SteamTrade
 		);
 
 	  	if($options['accessToken']) {
-	  		$formFields['trade_offer_create_params'] = http_build_query(array('trade_offer_access_token'=>$options['accessToken']));
+	  		$formFields['trade_offer_create_params'] = json_encode(array('trade_offer_access_token'=>$options['accessToken']));
 	  		$query['token'] = $options['accessToken'];
 	  	}
 
